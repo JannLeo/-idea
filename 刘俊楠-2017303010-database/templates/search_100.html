@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册人数>=100</title>
+</head>
+<body>
+    <h3>
+         <a href = "{{ url_for('show_all') }}">刘俊楠-2017303010-增删改查</a>
+      </h3>
+    <table>
+         <thead>
+            <tr>
+               <th>signupnumber</th>
+               <th>dealnumber</th>
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for signs in new_coupon1 %}
+               <tr>
+                  <td>    {{   signs.dealnumber }}</td>
+                  <td>    {{   signs.description}}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+</body>
+</html>
